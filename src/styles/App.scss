@@ -6,6 +6,11 @@
 	padding: 0;
 }
 
+#root {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 body {
 	font-family: "Titillium Web", sans-serif;
 }
@@ -301,9 +306,20 @@ hr.style-seven:before {
 	border-radius: 20px;
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 1250px) {
+	.container {
+		width: 100%;
+	}
 	.unit-list {
 		display: flex;
-		flex-direction: column;
+		flex-direction: column !important;
+		gap: 2rem !important;
+
+		.unit {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
 	}
 }
