@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
-		<div className="footer">
+		<footer className="footer">
 			<div>Copyright © 2024</div>
-		</div>
+		</footer>
 	);
 }
 

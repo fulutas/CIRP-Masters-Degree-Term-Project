@@ -3,14 +3,19 @@ import correctIcon from "../assets/correct-icon.svg"
 import inCorrectIcon from "../assets/wrong-icon.svg"
 import { eventList } from '../data/eventList';
 import arrowDown from "../assets/arrow-long-down-l.svg"
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import NotFoundEvent from './NotFoundEvent';
 
 
 const EventList = () => {
+	const params = useParams();
+	const filteredEvents = eventList.filter(event => event.unit === params.unit);
+
+
 	return (
 		<div id="event-list" className="wrapper">
 			<section className="item-list">
-				{eventList.map((event, index) => {
+				{filteredEvents.length > 0 ? filteredEvents.map((event, index) => {
 					return (
 						<div key={index} className="event-item">
 							<h2 className="title">
@@ -54,12 +59,16 @@ const EventList = () => {
 							</div>
 						</div>
 					)
-				})}
+				}) : <NotFoundEvent />}
 
-				<div className='horizontal-center'>
-					<button className='button light' type='button'>
-						<Link className='route-link' to="/">Anasayfaya Geri Dön</Link>
-					</button>
+				<div className='horizontal-center' style={{ marginBottom: "100px" }}>
+
+					<Link className='route-link' to="/">
+						<button className='button light' type='button'>
+							Anasayfaya Geri Dön
+						</button>
+					</Link>
+
 				</div>
 
 			</section>

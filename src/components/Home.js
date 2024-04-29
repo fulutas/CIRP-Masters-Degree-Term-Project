@@ -14,7 +14,6 @@ const Home = () => {
 	]
 
 	const handleUnitClick = (unit) => {
-		console.log(unit)
 		navigate(`events/${unit.unit}`)
 	}
 
