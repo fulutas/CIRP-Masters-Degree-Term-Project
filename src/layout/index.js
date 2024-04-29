@@ -8,7 +8,7 @@ const Layout = () => {
         <div className="container" id="layout">
             <Header />
             <Outlet />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

@@ -10,27 +10,27 @@ body {
 	font-family: "Titillium Web", sans-serif;
 }
 
-.horizontal-center{
+.horizontal-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.route-link{
+.route-link {
 	text-decoration: none;
 	appearance: none;
 	font-size: 16px;
-	
-	&:visited{
+
+	&:visited {
 		color: inherit;
 	}
 
-	&:hover{
+	&:hover {
 		opacity: 0.7;
 	}
 }
 
-.button{
+.button {
 	cursor: pointer;
 	appearance: none;
 	padding: 20px;
@@ -40,7 +40,7 @@ body {
 	color: #2f2f2f;
 	font-size: 16px;
 
-	&:hover{
+	&:hover {
 		opacity: 0.7;
 	}
 }
@@ -98,10 +98,10 @@ body {
 }
 
 //Footer
-.footer{
+.footer {
 	position: absolute;
-    bottom: 0;
-	
+	bottom: 0;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -110,7 +110,7 @@ body {
 	background-color: #403f3f;
 	padding: 20px 10px;
 	border-radius: 6px;
-	color: #FFFF;
+	color: #ffff;
 
 	width: 100%;
 	max-width: 1340px;
@@ -171,15 +171,15 @@ body {
 	margin-top: 30px;
 	margin-bottom: 30px;
 
-	.page-info{
+	.page-info {
 		margin-bottom: 20px;
 
-		.page-title{
+		.page-title {
 			color: #e37151;
 		}
 
-		p{
-			color :#8e8d8d;
+		p {
+			color: #8e8d8d;
 		}
 	}
 
@@ -206,7 +206,7 @@ body {
 
 			.step-title {
 				color: #2f2f2f;
-				margin-bottom : 10px;
+				margin-bottom: 10px;
 			}
 
 			.unit-step-item {
@@ -214,7 +214,7 @@ body {
 				border-radius: 10px;
 				padding: 20px;
 				background-color: #f7f7f7;
-			
+
 				.step-title {
 					text-align: center;
 					font-size: 26px;
@@ -241,7 +241,7 @@ body {
 
 						&.correct-event {
 							border: 2px solid #5b9e4d;
-							background-color: #FFF;
+							background-color: #fff;
 						}
 
 						&.incorrect-event {
@@ -275,27 +275,35 @@ body {
 
 hr.style-line {
 	margin-top: 30px;
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 hr.style-seven {
-    overflow: visible; /* For IE */
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0 0 0;
-    border-radius: 20px;
+	overflow: visible; /* For IE */
+	height: 30px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px 0 0 0;
+	border-radius: 20px;
 }
-hr.style-seven:before { /* Not really supposed to work, but does */
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 1px 0;
-    border-radius: 20px;
+hr.style-seven:before {
+	/* Not really supposed to work, but does */
+	display: block;
+	content: "";
+	height: 30px;
+	margin-top: -31px;
+	border-style: solid;
+	border-color: black;
+	border-width: 0 0 1px 0;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 992px) {
+	.unit-list {
+		display: flex;
+		flex-direction: column;
+	}
 }
