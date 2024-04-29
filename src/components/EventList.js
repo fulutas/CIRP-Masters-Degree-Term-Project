@@ -10,10 +10,17 @@ import NotFoundEvent from './NotFoundEvent';
 const EventList = () => {
 	const params = useParams();
 	const filteredEvents = eventList.filter(event => event.unit === params.unit);
-
+	console.log(filteredEvents[0])
 
 	return (
 		<div id="event-list" className="wrapper">
+			{filteredEvents.length > 0 && (
+				<div className='page-info'>
+					<h1 className='page-title'>{filteredEvents[0].unitName} - Olay Listesi</h1>
+					<p>{filteredEvents.length} siber olay listelendi.</p>
+					<Link to="/" className='route-link'>Anasayfaya Geri Dön</Link>
+				</div>
+			)}
 			<section className="item-list">
 				{filteredEvents.length > 0 ? filteredEvents.map((event, index) => {
 					return (
@@ -55,7 +62,7 @@ const EventList = () => {
 										</>
 									)
 								})}
-
+								<hr className='style-line'></hr>
 							</div>
 						</div>
 					)

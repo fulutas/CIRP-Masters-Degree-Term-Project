@@ -24,6 +24,10 @@ body {
 	&:visited{
 		color: inherit;
 	}
+
+	&:hover{
+		opacity: 0.7;
+	}
 }
 
 .button{
@@ -167,10 +171,22 @@ body {
 	margin-top: 30px;
 	margin-bottom: 30px;
 
+	.page-info{
+		margin-bottom: 20px;
+
+		.page-title{
+			color: #e37151;
+		}
+
+		p{
+			color :#8e8d8d;
+		}
+	}
+
 	.item-list {
 		display: flex;
 		flex-direction: column;
-		gap: 45px;
+		gap: 20px;
 	}
 
 	.index-event {
@@ -255,4 +271,31 @@ body {
 			}
 		}
 	}
+}
+
+hr.style-line {
+	margin-top: 30px;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
