@@ -10,6 +10,36 @@ body {
 	font-family: "Titillium Web", sans-serif;
 }
 
+.horizontal-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.route-link{
+	text-decoration: none;
+	appearance: none;
+	font-size: 17px;
+	
+	&:visited{
+		color: inherit;
+	}
+}
+
+.button{
+	cursor: pointer;
+	appearance: none;
+	padding: 20px;
+	border: none;
+	border-radius: 7px;
+	background-color: #eeeeee;
+	color: #2f2f2f;
+
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
 .container {
 	width: 100%;
 	max-width: 1340px;
@@ -25,7 +55,7 @@ body {
 // Header
 .header {
 	overflow: hidden;
-	background-color: #f1f1f1;
+	background-color: #403f3f;
 	padding: 20px 10px;
 	border-radius: 6px;
 
@@ -59,6 +89,19 @@ body {
 	.header-right {
 		float: right;
 	}
+}
+
+//Footer
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	overflow: hidden;
+	background-color: #403f3f;
+	padding: 20px 10px;
+	border-radius: 6px;
+	color: #FFFF;
 }
 
 @media screen and (max-width: 500px) {
@@ -113,6 +156,13 @@ body {
 
 #event-list {
 	margin-top: 30px;
+	margin-bottom: 30px;
+
+	.item-list {
+		display: flex;
+		flex-direction: column;
+		gap: 45px;
+	}
 
 	.index-event {
 		color: #2f2f2f;
@@ -129,12 +179,17 @@ body {
 		.unit-steps {
 			margin-top: 30px;
 
+			.step-title {
+				color: #2f2f2f;
+				margin-bottom : 10px;
+			}
+
 			.unit-step-item {
-				margin-top: 10px;
 				border: 2px solid #e6e6e6;
 				border-radius: 10px;
 				padding: 20px;
-
+				background-color: #f7f7f7;
+			
 				.step-title {
 					text-align: center;
 					font-size: 26px;
@@ -161,6 +216,7 @@ body {
 
 						&.correct-event {
 							border: 2px solid #5b9e4d;
+							background-color: #FFF;
 						}
 
 						&.incorrect-event {
@@ -180,11 +236,10 @@ body {
 							box-shadow: -7px 18px 14px -20px rgba(0, 0, 0, 0.1);
 						}
 					}
-
 				}
 			}
 
-			.arrow{
+			.arrow {
 				display: flex;
 				justify-content: center;
 				align-items: center;
